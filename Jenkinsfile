@@ -17,10 +17,13 @@ pipeline{
                 
             }
         }
-         stage('quality gates status'){
+         stage('quality Gate status'){
+
             steps{
+
                 script{
-                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-auth'
+
+                        waitForQualityGate abortPipeline: false, credentialsId: 'sonar-auth'
                 }
             }
          } 
