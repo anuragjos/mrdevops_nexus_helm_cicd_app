@@ -32,5 +32,16 @@ pipeline{
                 }
             }
         }
+        // stage('docker build & push nexus repo'){
+        //     steps{
+        //         script{
+        //              sh '''
+        //                 docker
+
+        //              '''
+
+        //         }
+        //     }
+        // }
     }
 }
