@@ -17,5 +17,10 @@ pipeline{
                 }
             }
         }
+        stage("quality Gate status"){
+            script{
+               waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token' 
+            }
+        }
     }
 }
