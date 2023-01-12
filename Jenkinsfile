@@ -7,7 +7,7 @@ pipeline{
                     image 'maven'
                 }
             }
-            steps{
+            stage{
                 steps{
                     script{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
