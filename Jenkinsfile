@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage('sonar quality status')
-        agnet{
+        agent{
             docker{
                 image 'maven'
             }
