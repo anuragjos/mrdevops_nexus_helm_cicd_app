@@ -25,12 +25,12 @@ pipeline{
                 }
             }
         }
-        stage('quality Gate status'){
-            steps{
-                script{
+        // stage('quality Gate status'){
+        //     steps{
+        //         script{
                    
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
     }
 }
