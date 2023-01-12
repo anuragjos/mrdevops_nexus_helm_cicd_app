@@ -33,7 +33,7 @@ pipeline{
                 }
             }
         }
-        // stage('docker image build & docker image push nexus repo'){
+         stage('docker image build & docker image push nexus repo'){
             steps{
                 script{
                     withCredentials([string(credentialsId: 'nexus-pass', variable: 'nexus_creds')]) {
