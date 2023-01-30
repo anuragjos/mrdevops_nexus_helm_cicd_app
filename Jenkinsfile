@@ -16,6 +16,13 @@ pipeline{
                 }
             }
         }
+        stage("Quality Gates Status"){
+            steps{
+                script{
+                    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-auth'
+                }
+            }
+        }
     }
 }
     
