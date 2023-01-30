@@ -3,7 +3,7 @@ pipeline{
     environment{
 
         VERSION = "${env.BUILD_ID}"
-        
+
     }
     stages{
         stage("sonar quality check"){
@@ -35,7 +35,7 @@ pipeline{
                       withCredentials([string(credentialsId: 'nexus_passwd', variable: 'nexus-auth')]) {
     
                         sh '''
-                          docker build -t 3.110.117.4:8083/springapp: ${VERSION} .
+                          docker build -t 3.110.117.4:8083/springapp:${VERSION} .
                           docker login -u admin -p ${nexus-auth} 3.110.117.4:8083
                           docker push 3.110.117.4:8083/springapp: ${VERSION}
                           docker rmi 3.110.117.4:8083/springapp: ${VERSION}
