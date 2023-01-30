@@ -1,6 +1,6 @@
 pipeline{
     agent any 
-    stage('sonar quality check'){
+    stages('sonar quality check'){
         agent {
             docker {
                 image 'maven'
